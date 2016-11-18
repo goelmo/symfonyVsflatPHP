@@ -1,3 +1,4 @@
+<?php 
 // model.php
 function open_database_connection()
 {
@@ -19,3 +20,4 @@ $posts[] = $row;
 close_database_connection($link);
 return $posts;
 }
+ ?>
