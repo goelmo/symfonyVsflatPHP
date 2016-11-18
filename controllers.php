@@ -8,6 +8,9 @@ function list_action()
 function show_action($id)
 {
 	$post = get_post_by_id($id);
+    if(!$post) {
+        echo "Page not found";
+    }
 	require 'templates/show.php';
 }
 
