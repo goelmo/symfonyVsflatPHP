@@ -10,7 +10,10 @@
 	<ul>
 		<?php foreach ($posts as $post): ?>
 		<li>
-			<a href="/show.php?id=<?= $post['id'] ?>">
+<!--		<a href="/symfonyVsflatPHP/show.php?id=--><?//= $post['id'] ?><!--">
+            // specify the home directory name to the start of all the page after that show the ID
+-->
+			<a href="/symfonyVsflatPHP/show.php?id=<?= $post['id'] ?>">
 				<?= $post['title'] ?>
 			</a>
 		</li>

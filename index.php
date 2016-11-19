@@ -12,7 +12,7 @@ echo $uri;
 
 //if ('/index.php' === $uri) {
 if ('/symfonyVsflatPHP/index.php' === $uri) {
-    // Merhawi revison : add the folder name so that it could start loading form then
+    // Merhawi revision : add the folder name so that it could start loading form then
 	list_action();
     // '/pattern/'
 } elseif (preg_match('/\/symfonyVsflatPHP\/index.php\/show\/(\d+)/', $uri, $matches)) {

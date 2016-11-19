@@ -1,0 +1,32 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: AH
+ * Date: 11/19/2016
+ * Time: 4:56 PM
+ */
+
+
+// controllers.php
+use Symfony\Component\HttpFoundation\Response;
+function list_action()
+{
+    $posts = get_all_posts();
+    $html = render_template('templates/list.php', array('posts' => $posts));
+    return new Response($html);
+}
+function show_action($id)
+{
+    $post = get_post_by_id($id);
+    $html = render_template('templates/show.php', array('post' => $post));
+    return new Response($html);
+}
+// helper function to render templates
+function render_template($path, array $args)
+{
+    extract($args);
+    ob_start();
+    require $path;
+    $html = ob_get_clean();
+    return $html;
+}

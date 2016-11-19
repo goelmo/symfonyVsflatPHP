@@ -1,8 +1,5 @@
 <?php
 // index.php
-//another way to create index by isolating the presentation
-//list 2.2
-
 $link = new PDO("mysql:host=localhost;dbname=blog_db", 'myuser', '');
 $result = $link->query('SELECT id, title FROM post');
 $posts = array();
